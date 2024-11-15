@@ -1,0 +1,12 @@
+{
+  "name": "typescript-crud-hackathon",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix json-server && npm install --prefix frontend",
+    "start-all": "npx tsc --project frontend && concurrently \"npm run dev --prefix backend\" \"npm start --prefix json-server\" \"npx live-server ./frontend --entry-file=frontend/index.html --wait=500\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
